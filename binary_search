@@ -1,0 +1,27 @@
+myList = []
+
+myList = list(map(int, input("Input: ").split() ))
+n = int(input())
+
+def binary_search(myList,n):
+    myList.sort()
+    low = 0
+    high = len(myList) - 1
+
+    while low <= high:
+        mid = (low+high) // 2
+
+        if myList[mid] == n:
+            return mid
+        elif myList[mid] < n:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return None
+
+
+if type(binary_search(myList,n)) == int:
+    print(binary_search(myList,n) + 1)
+else:
+    print(binary_search(myList, n))
