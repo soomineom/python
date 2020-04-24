@@ -1,0 +1,51 @@
+class Tree:
+    def __init__(self, data, left_child=None, right_child=None):
+        self.data = data
+        self.left_child = left_child
+        self.right_child = right_child
+
+def init_tree():
+    global root
+
+    left_subTree = Tree(1, Tree(61), Tree(26))
+    right_subTree = Tree(37, Tree(59), Tree(48))
+
+    root = Tree(15, left_subTree, right_subTree)
+
+
+def preorder_traverse(tree):
+    if tree == None:
+        return
+    print(tree.data)
+    preorder_traverse(tree.left_child)
+    preorder_traverse(tree.right_child)
+
+def inorder_traverse(tree):
+    if tree == None:
+        return
+    inorder_traverse(tree.left_child)
+    print(tree.data)
+    inorder_traverse(tree.right_child)
+
+def postorder_traverse(tree):
+    if tree == None:
+        return
+    postorder_traverse(tree.left_child)
+    postorder_traverse(tree.right_child)
+    print(tree.data)
+
+
+root = None
+
+
+if __name__ == '__main__':
+    init_tree()
+    print("Preorder Traverse")
+    preorder_traverse(root)
+    print
+    print("Inorder Traverse")
+    inorder_traverse(root)
+    print
+    print("Postorder Traverse")
+    postorder_traverse(root)
+    print
