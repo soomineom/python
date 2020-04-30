@@ -1,0 +1,11 @@
+n = int(input())
+result = []
+
+for i in range(n):
+    num = int(input())
+    result.append(num)
+    
+result.sort()
+for j in range(len(result)):
+    print(result[j])
+    
