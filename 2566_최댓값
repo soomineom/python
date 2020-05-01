@@ -1,0 +1,16 @@
+pan = [[int(col) for col in input().split() ] for row in range(9)]
+max = pan[0][0]
+
+col = 0
+row = 0
+
+for i in range(0,9,1):
+    for j in range(0,9,1):
+        if pan[i][j] > max:
+            max = pan[i][j]
+            col = i + 1
+            row = j + 1
+            
+print(max)
+print(col, row, end=' ')
+        
