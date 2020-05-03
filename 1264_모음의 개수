@@ -1,0 +1,12 @@
+sen = input()
+vowel = 'AaEeIiOoUu'
+while sen != '#':
+    cnt = 0
+    for i in sen:
+        if i in vowel:
+            cnt += 1
+            
+    print(cnt)
+    sen = input()
+        
+    
