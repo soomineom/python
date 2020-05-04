@@ -1,0 +1,8 @@
+x=int(input('x = '))
+y=int(input('y = '))
+
+def square(x,y):
+    return x**2, y**2
+
+x_sq, y_sq = square(x,y)
+print('{}제곱 = {}, {}제곱 = {}'.format(x,x_sq,y,y_sq))
