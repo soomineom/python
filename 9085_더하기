@@ -1,5 +1,0 @@
-t = int(input())
-
-for i in range(t):
-    int(input())
-    print(sum(map(int, input().split())))
